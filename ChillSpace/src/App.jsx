@@ -8,6 +8,8 @@ import { Route, Routes } from 'react-router-dom'
 import UserProfile from './components/user/UserProfile'
 import Login from './components/common/Login'
 import Signup from './components/common/Signup'
+import "bootstrap/dist/css/bootstrap.min.css";
+import AddHouse from './components/user/AddHouse'
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
 <Routes>
   <Route path='/user' element = {<UserSidebar></UserSidebar>}>
     <Route path='profile' element ={<UserProfile></UserProfile>}></Route>
+    <Route path='addhouse' element ={<AddHouse></AddHouse>}></Route>
   </Route>
   <Route path='login' element = {<Login></Login>}></Route>
   <Route path='signup' element = {<Signup></Signup>}></Route>

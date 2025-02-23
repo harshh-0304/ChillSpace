@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../user/AddHouse"
 
 export const UserNavbar = () => {
   return (
@@ -26,6 +28,7 @@ export const UserNavbar = () => {
               Contact
             </a>
           </li>
+          <Link to="addhouse" className="btn btn-primary">Add House</Link>
         </ul>
 
         <ul className="navbar-nav ms-auto">
@@ -124,6 +127,7 @@ export const UserNavbar = () => {
               </a>
             </div>
           </li>
+        
 
           <li className="nav-item dropdown">
             <a className="nav-link" data-bs-toggle="dropdown" href="#">
@@ -216,11 +220,14 @@ export const UserNavbar = () => {
                 <a href="#" className="btn btn-default btn-flat float-end">
                   Sign out
                 </a>
+                
               </li>
             </ul>
           </li>
         </ul>
       </div>
+     
+
     </nav>
   );
 };
