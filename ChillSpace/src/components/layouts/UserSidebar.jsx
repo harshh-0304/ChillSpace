@@ -1,125 +1,83 @@
-import React from 'react'
-import { UserNavbar } from './UserNavbar'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import { UserNavbar } from './UserNavbar';
+import { Outlet } from 'react-router-dom';
 
 export const UserSidebar = () => {
-  return (<>
-    <UserNavbar></UserNavbar>
-    <aside
-        className="app-sidebar bg-body-secondary shadow"
-        data-bs-theme="dark"
-      >
+  return (
+    <>
+      <UserNavbar />
+      <aside className="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
         <div className="sidebar-brand">
-          
-          <a href="./index.html" className="brand-link">
-            
-            <img
-              src="../../dist/assets/img/AdminLTELogo.png"
-              alt="AdminLTE Logo"
-              className="brand-image opacity-75 shadow"
-            />
-            
-            <span className="brand-text fw-light">AdminLTE 4</span>
-            
+          <a href="/" className="brand-link">
+            <img src="/assets/img/credit/logo-dark.png" alt="ChillSpace Logo" className="brand-image opacity-75 shadow" />
+            <span className="brand-text fw-light">ChillSpace</span>
           </a>
-          
         </div>
 
-        <div
-          className=""
-          data-overlayscrollbars-viewport="scrollbarHidden overflowXHidden overflowYScroll"
-          tabIndex={-1}
-          style={{
-            marginRight: "-16px",
-            marginBottom: "-16px",
-            marginLeft: 0,
-            top: "-8px",
-            right: "auto",
-            left: "-8px",
-            width: "calc(100% + 16px)",
-            padding: 8,
-          }}
-        >
+        <div className="sidebar-menu-container">
           <nav className="mt-2">
-            
-            <ul
-              className="nav sidebar-menu flex-column"
-              data-lte-toggle="treeview"
-              role="menu"
-              data-accordion="false"
-            >
-              <li className="nav-item menu-open">
-                <a href="#" className="nav-link active">
-                  <i className="nav-icon bi bi-speedometer" />
-                  <p>
-                    Dashboard
-                    <i className="nav-arrow bi bi-chevron-right" />
-                  </p>
-                </a>
-                <ul className="nav nav-treeview">
-                  <li className="nav-item">
-                    <a href="./index.html" className="nav-link active">
-                      <i className="nav-icon bi bi-circle" />
-                      <p>Dashboard v1</p>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="./index2.html" className="nav-link">
-                      <i className="nav-icon bi bi-circle" />
-                      <p>Dashboard v2</p>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="./index3.html" className="nav-link">
-                      <i className="nav-icon bi bi-circle" />
-                      <p>Dashboard v3</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+            <ul className="nav sidebar-menu flex-column" role="menu">
               <li className="nav-item">
-                <a href="./generate/theme.html" className="nav-link">
-                  <i className="nav-icon bi bi-palette" />
-                  <p>Theme Generate</p>
+                <a href="/home" className="nav-link">
+                  <i className="nav-icon bi bi-house-door" />
+                  <p>Home</p>
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <i className="nav-icon bi bi-box-seam-fill" />
-                  <p>
-                    Widgets
-                    <i className="nav-arrow bi bi-chevron-right" />
-                  </p>
+                <a href="/explore" className="nav-link">
+                  <i className="nav-icon bi bi-search" />
+                  <p>Explore Listings</p>
                 </a>
-                <ul className="nav nav-treeview">
-                  <li className="nav-item">
-                    <a href="./widgets/small-box.html" className="nav-link">
-                      <i className="nav-icon bi bi-circle" />
-                      <p>Small Box</p>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="./widgets/info-box.html" className="nav-link">
-                      <i className="nav-icon bi bi-circle" />
-                      <p>info Box</p>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="./widgets/cards.html" className="nav-link">
-                      <i className="nav-icon bi bi-circle" />
-                      <p>Cards</p>
-                    </a>
-                  </li>
-                </ul>
+              </li>
+              <li className="nav-item">
+                <a href="/bookings" className="nav-link">
+                  <i className="nav-icon bi bi-calendar-check" />
+                  <p>My Bookings</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="/wishlist" className="nav-link">
+                  <i className="nav-icon bi bi-heart" />
+                  <p>Wishlist</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="/host" className="nav-link">
+                  <i className="nav-icon bi bi-plus-square" />
+                  <p>Host a Stay</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="/messages" className="nav-link">
+                  <i className="nav-icon bi bi-chat-dots" />
+                  <p>Messages</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="/notifications" className="nav-link">
+                  <i className="nav-icon bi bi-bell" />
+                  <p>Notifications</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="/profile" className="nav-link">
+                  <i className="nav-icon bi bi-person-circle" />
+                  <p>Profile Settings</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="/logout" className="nav-link text-danger">
+                  <i className="nav-icon bi bi-box-arrow-right" />
+                  <p>Logout</p>
+                </a>
               </li>
             </ul>
-            
           </nav>
         </div>
       </aside>
       <main className="app-main">
-        <Outlet></Outlet>
+        <Outlet />
       </main>
-      </>
-  )
-}
+    </>
+  );
+};
