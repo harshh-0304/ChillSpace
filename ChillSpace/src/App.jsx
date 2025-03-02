@@ -10,6 +10,8 @@ import Login from './components/common/Login'
 import Signup from './components/common/Signup'
 import "bootstrap/dist/css/bootstrap.min.css";
 import AddHouse from './components/user/AddHouse'
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 function App() {
