@@ -6,17 +6,21 @@ import "./assets/css/adminlte.min.css"
 import { UserSidebar } from './components/layouts/UserSidebar'
 import { Route, Routes } from 'react-router-dom'
 import UserProfile from './components/user/UserProfile'
-import Login from './components/common/Login'
+import {Login} from './components/common/Login'
 import Signup from './components/common/Signup'
 import "bootstrap/dist/css/bootstrap.min.css";
 import AddHouse from './components/user/AddHouse'
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 
 
 function App() {
  
+ 
 
+  axios.defaults.baseURL = "http://localhost:3000";
+  
   return (
   <>
   
